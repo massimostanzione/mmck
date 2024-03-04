@@ -2,7 +2,7 @@
 #include <malloc.h>
 #include <stdlib.h>
 
-// TODO maggiore randomicità
+// TODO maggiore randomicità category=generator issue=1
 // TODO generare in parallelo
 double *generate(int rows, int cols) {
     int max = 30, min = -30;
