@@ -14,3 +14,6 @@ jobs:
         REF: ${{ github.ref }}
         MIN_WORDS: 0
         MIN_CHARACTERS: 0
+        LABEL: "tdg-autogen"
+        EXTENDED_LABELS: 0
+        COMMENT_ON_ISSUES: 1
