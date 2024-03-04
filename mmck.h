@@ -49,7 +49,7 @@ MMCK_MPI_Process_Info process_info;
 #define REORDER_DEFAULT             0
 
 
-double *generate(int rows, int cols);
+void generate(int rows, int cols, double *output);
 
 void MMCK_Free_all();
 
