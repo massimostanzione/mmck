@@ -7,8 +7,11 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_COMPILER mpicc)
 
 add_executable(mmck
+        mmck.h
         src/generator/generator.c
         launcher.c
         src/generator/generator.h
-        mmck.h
+        src/utils/distr.c
+        src/utils/distr.h
+        src/utils/misc.c
 )
