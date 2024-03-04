@@ -3,8 +3,6 @@
 #include <stdlib.h>
 
 // TODO maggiore randomicità
-// category=generator
-
 // TODO generare in parallelo
 double *generate(int rows, int cols) {
     int max = 30, min = -30;
