@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 // TODO maggiore randomicità
-// category=generator issue=1
+// category=generator
 
 // TODO generare in parallelo
 double *generate(int rows, int cols) {
