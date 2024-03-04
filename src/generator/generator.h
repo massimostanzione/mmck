@@ -1,0 +1,5 @@
+#ifndef MMCK_GENERATOR_H
+#define MMCK_GENERATOR_H
+
+
+#endif //MMCK_GENERATOR_H
