@@ -2,7 +2,17 @@
 #include "distr.h"
 #include "../../mmck.h"
 
-void distribute(double* input, double *output){
+int distribute_cols_count(int rows_no, int cols_no) {
+    int base_cols = cols_no / program_info.size;
+    int spare_cols = cols_no % program_info.size;
+
+    //MPI_Type_create_subarray()
+
+
+    return process_info.rank < spare_cols ? base_cols + 1 : base_cols;
+}
+
+void distribute(double *input, double *output) {
 /*
     MPI_Datatype distrtype;
 

@@ -2,13 +2,14 @@
 #include <malloc.h>
 #include <stdlib.h>
 #include "../../mmck.h"
+#include "../utils/distr.h"
 
 // TODO maggiore randomicità
 void generate(int rows, int cols, double *output) {
     int max = 30, min = -30;
 
     // FIXME disparità processi/numero righe
-    int count = cols * (rows / (program_info.size));
+    int count = rows * distribute_cols_count(rows, cols); //rows * (cols / (program_info.size));
     double *part = (double *) malloc(count * sizeof(double));
     if (!part) {
         printf("Won't generate!\n");
