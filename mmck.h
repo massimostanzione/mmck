@@ -42,7 +42,7 @@ MMCK_MPI_Process_Info process_info;
 #define NON_ROOT    if (process_info.rank  > ROOT_RANK)
 #define RANK_ECHO   ROOT        printf("[ROOT   ] ");                       \
                     NON_ROOT    printf("[proc. %d] ", process_info.rank);
-#define RANK_SORT   ROOT    for(int _rank=0;_rank<session_vars.size;_rank++)
+#define RANK_SORT   ROOT    for(int _rank=0;_rank<program_info.size;_rank++) if(process_info.rank==_rank)
 
 
 #define INPUT_FILE_METADATA_CARDTY  2
