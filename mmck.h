@@ -50,6 +50,7 @@ MMCK_MPI_Process_Info process_info;
 #define REORDER_DEFAULT             0
 
 
+void MMCK_Init(MPI_Comm comm);
 void generate(int rows, int cols, double *output);
 
 void MMCK_Matrices_mult(int m, int n, int k, double *a, int *desc_a, double *b, int *desc_b, double *c, int *desc_c);

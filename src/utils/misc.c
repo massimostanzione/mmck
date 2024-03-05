@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include "../../mmck.h"
 
-void MMCK_Finalize(){
-    MPI_Comm_free(&program_info.global_comm);
-    //MPI_Comm_free(&program_info.topology_comm);
+void MMCK_Finalize() {
+    if (program_info.global_comm != NULL) MPI_Comm_free(&program_info.global_comm);
+    if (program_info.topology_comm != NULL) MPI_Comm_free(&program_info.topology_comm);
 }
 
 //matxutils?

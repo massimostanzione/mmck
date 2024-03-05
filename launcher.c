@@ -4,16 +4,15 @@
 #include "mmck.h"
 #include "src/utils/matxutils.h"
 
+
 int main(int argc, char **argv) {
     // TODO prendere da input
     int m = 3, n = 3, k = 3, mb = 1, nb = 1;
 
     MPI_Init(&argc, &argv);
-
-    //TODO inizializzare in mmck?
-    MPI_Comm_dup(MPI_COMM_WORLD, &program_info.global_comm);
-    MPI_Comm_size(program_info.global_comm, &(program_info.size));
-    MPI_Comm_rank(program_info.global_comm, &(process_info.rank));
+    MPI_Comm comm;
+    MPI_Comm_dup(MPI_COMM_WORLD, &comm);
+    MMCK_Init(comm);
 
     // TODO nel codice locale c'era una funzione apposita
     double *A = (double *) allocate_mem(m * k * sizeof(double));
@@ -63,4 +62,5 @@ int main(int argc, char **argv) {
 
 
 }
+
 
