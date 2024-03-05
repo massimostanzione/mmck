@@ -11,11 +11,7 @@ void generate(int rows, int cols, double *output) {
     int elements_count = rows * distribute_cols_count(cols);
 
     // allocate memory for generating random values, according to the count of the elements to be generated
-    double *part = (double *) malloc(elements_count * sizeof(double));
-    if (!part) {
-        printf("Won't generate!\n");
-        exit(-1);
-    }
+    double *part = (double *) allocate_mem(elements_count * sizeof(double));
 
     // generate random values
     // TODO maggiore randomicità

@@ -14,4 +14,7 @@ add_executable(mmck
         src/utils/distr.c
         src/utils/distr.h
         src/utils/misc.c
+        src/mpi/mmck-mpi.c
+        src/utils/matxutils.h
+        src/utils/matxutils.c
 )

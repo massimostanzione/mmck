@@ -19,6 +19,7 @@ typedef struct MMCK_MPI_Program_Info_t {
     int size;
     MPI_Comm global_comm;
     MPI_Comm topology_comm;
+    int processes_per_dim[DIMS_CARDTY];
 } MMCK_MPI_Program_Info;
 MMCK_MPI_Program_Info program_info;
 
@@ -51,6 +52,13 @@ MMCK_MPI_Process_Info process_info;
 
 void generate(int rows, int cols, double *output);
 
-void MMCK_Free_all();
+void MMCK_Matrices_mult(int m, int n, int k, double *a, int *desc_a, double *b, int *desc_b, double *c, int *desc_c);
+
+//FIXME non qui
+void *allocate_mem(unsigned long count);
+
+void MMCK_Finalize();
+
+void MMCK_Abort(const char *error_string);
 
 #endif //MMCK_MMCK_H
